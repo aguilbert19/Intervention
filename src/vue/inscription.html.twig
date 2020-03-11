@@ -1,0 +1,63 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{{parent()}}Inscription{% endblock %}
+
+{% block contenu %}
+
+<br>
+    <div class="row justify-content-center">
+      <form method="POST" 
+
+        action="index.php?page=catalogue"
+
+         class="col-xl-4 col-sm-8">
+
+        <div class="form-group">
+          <label for="formGroupExampleInput">Nom</label>
+          <input type="text" name="nom" class="form-control" id="formGroupExampleInput" placeholder="Votre nom de famille">
+        </div>
+
+        <div class="form-group">
+          <label for="formGroupExampleInput">Prénom</label>
+          <input type="text" name="prenom" class="form-control" id="formGroupExampleInput" placeholder="Votre premier prénom">
+        </div>
+
+        <div class="form-group">
+          <label for="formGroupExampleInput">Login</label>
+          <input type="text" name="login" class="form-control" id="formGroupExampleInput" placeholder="Votre login">
+        </div>
+
+        <div class="form-group">
+          <label for="formGroupExampleInput">Ville</label>
+          <input type="text" name="ville" class="form-control" id="formGroupExampleInput" placeholder="La ville où vous vivez">
+        </div>
+
+        <div class="form-group">
+          <label for="formGroupExampleInput">Code Postal</label>
+          <input type="text" name="cp" class="form-control" id="formGroupExampleInput" placeholder="Votre code postal">
+        </div>
+
+        <div class="form-group">
+          <label for="formGroupExampleInput">Date de Naissance</label>
+          <input type="date" name="datenaissance" class="form-control" id="formGroupExampleInput" placeholder="Votre date de naissance">
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputEmail">Adresse Email</label>
+          <input type="email" name="mail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <small id="emailHelp" class="form-text text-muted">Elle ne sera pas partagée</small>
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputPassword1">Mot de passe</label>
+          <input type="password" name="mdp" class="form-control" id="exampleInputPassword1">
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputPassword1">Confirmation de mot de passe</label>
+          <input type="password" name="mdpconf" class="form-control" id="exampleInputPassword1">
+        </div>
+
+        <button type="submit" class="btn btn-primary">S'Inscrire</button>
+      </form>
+    </div>{% endblock %}

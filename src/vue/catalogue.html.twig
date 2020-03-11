@@ -1,0 +1,21 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{{parent()}}Catalogue{% endblock %}
+
+{% block contenu %}
+<table>
+{% for personne in liste %}
+<ul class="list-group">
+  <li class="list-group-item">
+  {% if personne.nom is empty %}
+		non renseigné
+	{% else %}
+		<a> Nom : {{personne.nom}}       Prenom : {{personne.prenom}}</a>
+  {% endif %} 
+    </li>
+</ul>
+{% endfor %}
+</table>
+{% endblock %}
+              
+              
